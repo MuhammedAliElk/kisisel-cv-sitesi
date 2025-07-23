@@ -15,13 +15,10 @@ defaultContentLanguage = "tr"
 
     [languages.tr.params]
       favicon = "/logo.png"
-
       [languages.tr.params.social]
         email = "muhammedalielkiran@gmail.com"
-
       [languages.tr.params.theme]
         disableThemeToggle = false
-
       [languages.tr.params.color]
         primaryColor = "#212529"
         backgroundColor = "#ffffff"
@@ -29,17 +26,14 @@ defaultContentLanguage = "tr"
         secondaryTextColor = "#6c757d"
         textLinkColor = "#212529"
         borderColor = "#dee2e6"
-
       [languages.tr.params.navbar]
         align = "mx-auto"
         disableSearch = true
         brandLogo = "/logo.png"
-
       [languages.tr.params.font]
         fontSize = "1rem"
         fontWeight = "700"
         lineHeight = "1.6"
-
       [languages.tr.params.hero]
         enable = true
         intro = "Merhaba, ben"
@@ -64,7 +58,6 @@ defaultContentLanguage = "tr"
           [[languages.tr.params.hero.socialLinks.fontAwesomeIcons]]
             url = "mailto:muhammedalielkiran@gmail.com"
             icon = "fas fa-envelope"
-
       [languages.tr.params.about]
         enable = true
         title = "Hakkımda"
@@ -75,7 +68,6 @@ Hayatta beni en çok motive eden şey, **ailem**. Onların desteği ve sevgisi, 
 Bu web sitesi, mutfakta ortaya koyduğum eserleri sergilediğim kişisel portfolyom. Burada sadece yemeklerimi değil, mutfak felsefemi ve yaratıcı sürecimi de keşfedeceksiniz. En büyük hedefim mi? Bir gün, adımı dünyadaki sayılı **Michelin yıldızlı şefler** arasına yazdırarak, global bir mutfak sanatçısı olmak.
 Mutfak yolculuğumda bana eşlik ettiğiniz için teşekkür ederim!
         """
-
       [languages.tr.params.experience]
         enable = true
         title = "İş Deneyimlerim"
@@ -84,11 +76,7 @@ Mutfak yolculuğumda bana eşlik ettiğiniz için teşekkür ederim!
           companyUrl = "https://www.gloria.com.tr/en/"
           job = "Aşçı"
           date = "Mayıs 2024 - Eylül 2024"
-          content = """
-* Aşçılık hayatıma sıcak mutfakta ilk adımı attım.
-* Mutfağa adapte olma 
-* Pozisyon : Komi
-          """
+          content = "* Aşçılık hayatıma sıcak mutfakta ilk adımı attım.\n* Mutfağa adapte olma \n* Pozisyon : Komi"
           info = { content = "Aşçılık mesleğine ilk kez burada adım attım." }
           featuredLink = { enable = true, name = "2024 Sezon Galeri", url = "/#about" }
         [[languages.tr.params.experience.items]]
@@ -96,13 +84,9 @@ Mutfak yolculuğumda bana eşlik ettiğiniz için teşekkür ederim!
           companyUrl = "https://www.merithotels.com/"
           job = "Aşçı"
           date = "Ekim 2024 Günümüz"
-          content = """
-* Aşçılık hayatımda daha farklı insanlar tanıma imkanına sahip oldum
-* Pozisyon: Komi
-          """
+          content = "* Aşçılık hayatımda daha farklı insanlar tanıma imkanına sahip oldum\n* Pozisyon: Komi"
           info = { content = "Daha sonra 1 yıl kariyerime burada devam ettim."}
           featuredLink = { enable = true, name = "2025 Sezon Galeri", url = "/#about" }
-
       [languages.tr.params.education]
         enable = true
         title = "Eğitim Geçmişim"
@@ -112,28 +96,20 @@ Mutfak yolculuğumda bana eşlik ettiğiniz için teşekkür ederim!
           title = "Konya Teknik Üniversitesi Bilgisayar Programcılığı"
           school = { name = "Konya Teknik Üniversitesi", url = "https://www.ktun.edu.tr/" }
           GPA = "2.60/4.00"
-          content = """
-* Yazılım dünyasına adım attım
-* Kodlama mantığını kavradım ve ileri düzey programlarla çalıştım
-* Ofis programları,c#,Unity Engine,Assembly gibi programlar kullandım
-          """
+          content = "* Yazılım dünyasına adım attım..."
         [[languages.tr.params.education.items]]
           date = "2016 - 2020"
           title = "Anadolu Lisesi (Sayısal)"
           school = { name = "15 Temmuz Şehitleri Anadolu Lisesi" }
           GPA = "70/100"
-          content = ""
         [[languages.tr.params.education.items]]
           date = "2008-2015"
           title = "İlkokul ve Ortaokul"
           school = { name = "Sare Özkaşıkçı" }
           GPA = "90/100"
-          content = ""
-
       [languages.tr.params.projects]
-        enable = false
+        enable = true
         title = "Projelerim"
-
       [languages.tr.params.contact]
         enable = true
         title = "İletişime Geçin"
@@ -142,7 +118,6 @@ Mutfak yolculuğumda bana eşlik ettiğiniz için teşekkür ederim!
         btnName = "E-posta Gönder"
         [languages.tr.params.contact.formspree]
           enable = false
-
 
   # 2. İNGİLİZCE DİL AYARLARI
   [languages.en]
@@ -254,16 +229,14 @@ Thank you for accompanying me on my culinary journey!
           title = "Anatolian High School"
           school = { name = "15 Temmuz Sehitleri Anatolian High School" }
           GPA = "70/100"
-          content = ""
         [[languages.en.params.education.items]]
           date = "2008-2015"
           title = "Primary and Middle School"
           school = { name = "Sare Özkaşıkçı" }
           GPA = "90/100"
-          content = ""
 
       [languages.en.params.projects]
-        enable = false
+        enable = true
         title = "Projects"
       
       [languages.en.params.contact]
