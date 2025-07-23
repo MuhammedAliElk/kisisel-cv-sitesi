@@ -1,5 +1,5 @@
 # --- TEMEL HUGO AYARLARI ---
-baseURL = "http://localhost:1313/"
+#baseURL = "http://localhost:1313/"
 theme = "profile"
 defaultContentLanguage = "tr"
 
