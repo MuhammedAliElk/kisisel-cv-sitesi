@@ -108,7 +108,7 @@ Mutfak yolculuğumda bana eşlik ettiğiniz için teşekkür ederim!
           school = { name = "Sare Özkaşıkçı" }
           GPA = "90/100"
       [languages.tr.params.projects]
-        enable = true
+        enable = false
         title = "Projelerim"
       [languages.tr.params.contact]
         enable = true
@@ -236,7 +236,7 @@ Thank you for accompanying me on my culinary journey!
           GPA = "90/100"
 
       [languages.en.params.projects]
-        enable = true
+        enable = false
         title = "Projects"
       
       [languages.en.params.contact]
