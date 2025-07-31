@@ -1,0 +1,249 @@
+# --- TEMEL HUGO AYARLARI ---
+baseURL = "https://www.elkiran.com/"
+theme = "profile"
+defaultContentLanguage = "tr"
+
+# --- DİL TANIMLAMALARI ---
+[languages]
+
+  # 1. TÜRKÇE DİL AYARLARI
+  [languages.tr]
+    languageName = "Türkçe"
+    languageCode = "tr-tr"
+    weight = 1
+    title = "Muhammed Ali Elkıran"
+
+    [languages.tr.params]
+      favicon = "/logo.png"
+      [languages.tr.params.social]
+        email = "muhammedalielkiran@gmail.com"
+      [languages.tr.params.theme]
+        disableThemeToggle = false
+      [languages.tr.params.color]
+        primaryColor = "#212529"
+        backgroundColor = "#ffffff"
+        textColor = "#212529"
+        secondaryTextColor = "#6c757d"
+        textLinkColor = "#212529"
+        borderColor = "#dee2e6"
+      [languages.tr.params.navbar]
+        align = "mx-auto"
+        disableSearch = true
+        brandLogo = "/logo.png"
+      [languages.tr.params.font]
+        fontSize = "1rem"
+        fontWeight = "700"
+        lineHeight = "1.6"
+      [languages.tr.params.hero]
+        enable = true
+        intro = "Merhaba, ben"
+        title = "Muhammed Ali Elkıran"
+        subtitle = "Geleceğin Michellin Yıldızlı Şefi"
+        content = """
+        Merhaba! Yeteneklerimi ve deneyimlerimi sergilediğim kişisel CV siteme hoş geldiniz. 
+        Projelerime göz atarak ve özgeçmişimi inceleyerek hakkımda daha fazla bilgi edinebilirsiniz.
+        """
+        image = "images/ben_karsilama.jpg"
+        roundImage = false
+        [languages.tr.params.hero.button]
+          enable = true
+          name = "CV'mi Görüntüle"
+          url = "/muhammed_cv.pdf"
+          newPage = true
+          download = false
+        [languages.tr.params.hero.socialLinks]
+          [[languages.tr.params.hero.socialLinks.fontAwesomeIcons]]
+            url = "https://www.instagram.com/cheffmalie"
+            icon = "fab fa-instagram"
+          [[languages.tr.params.hero.socialLinks.fontAwesomeIcons]]
+            url = "mailto:muhammedalielkiran@gmail.com"
+            icon = "fas fa-envelope"
+      [languages.tr.params.about]
+        enable = true
+        title = "Hakkımda"
+        content = """
+Merhaba! Ben **Muhammed Ali Elkıran**, tutkuyla mesleğine bağlı bir aşçıyım. Mutfakta geçirdiğim her an, benim için bir keşif ve yaratıcılık yolculuğu. Bu lezzet dolu serüvene çıkmamda ailemin oldukça büyük payı var.Küçük yaşlardan itibaren mutfakla olan bağım, zamanla içimde büyüyen bir tutkuya dönüştü.
+Sayısal bir lise eğitiminin ardından yazılım alanında üniversite okumuş olsam da, hayat beni her zaman kokuların, tatların ve dokuların hüküm sürdüğü mutfağa geri çekti. Mutfak benim için sadece yemek pişirilen bir yer değil; aynı zamanda **problem çözdüğüm**, **küçük detaylarda büyük farklar yarattığım** ve **yenilikçi yaklaşımlar sergilediğim** bir sanat alanı. Her tabakta hikayeler anlatmayı, insanları mutlu etmeyi ve her lokmada bir iz bırakmayı seviyorum.
+Hayatta beni en çok motive eden şey, **ailem**. Onların desteği ve sevgisi, mutfakta sınırları zorlamam için bana ilham veriyor. Mutfakta veya hayatta karşılaştığım her durumda, **çözüm odaklı** ve **pozitif** bir yaklaşımla hareket etmeyi ilke edindim. Beni tanıyanlar genellikle **güvenilir** ve **azimle çalışan** biri olarak tanımlar.
+Bu web sitesi, mutfakta ortaya koyduğum eserleri sergilediğim kişisel portfolyom. Burada sadece yemeklerimi değil, mutfak felsefemi ve yaratıcı sürecimi de keşfedeceksiniz. En büyük hedefim mi? Bir gün, adımı dünyadaki sayılı **Michelin yıldızlı şefler** arasına yazdırarak, global bir mutfak sanatçısı olmak.
+Mutfak yolculuğumda bana eşlik ettiğiniz için teşekkür ederim!
+        """
+      [languages.tr.params.experience]
+        enable = true
+        title = "İş Deneyimlerim"
+        [[languages.tr.params.experience.items]]
+          company = "Gloria Hotels & Resorts"
+          companyUrl = "https://www.gloria.com.tr/en/"
+          job = "Aşçı"
+          date = "Mayıs 2024 - Eylül 2024"
+          content = "* Aşçılık hayatıma sıcak mutfakta ilk adımı attım.\n* Mutfağa adapte olma \n* Pozisyon : Komi"
+          info = { content = "Aşçılık mesleğine ilk kez burada adım attım." }
+          featuredLink = { enable = true, name = "2024 Sezon Galeri", url = "/#about" }
+        [[languages.tr.params.experience.items]]
+          company = "Merit Hotels & Casino"
+          companyUrl = "https://www.merithotels.com/"
+          job = "Aşçı"
+          date = "Ekim 2024 Günümüz"
+          content = "* Aşçılık hayatımda daha farklı insanlar tanıma imkanına sahip oldum\n* Pozisyon: Komi"
+          info = { content = "Daha sonra 1 yıl kariyerime burada devam ettim."}
+          featuredLink = { enable = true, name = "2025 Sezon Galeri", url = "/#about" }
+      [languages.tr.params.education]
+        enable = true
+        title = "Eğitim Geçmişim"
+        index = false
+        [[languages.tr.params.education.items]]
+          date = "2020-2022"
+          title = "Konya Teknik Üniversitesi Bilgisayar Programcılığı"
+          school = { name = "Konya Teknik Üniversitesi", url = "https://www.ktun.edu.tr/" }
+          GPA = "2.60/4.00"
+          content = "* Yazılım dünyasına adım attım..."
+        [[languages.tr.params.education.items]]
+          date = "2016 - 2020"
+          title = "Anadolu Lisesi (Sayısal)"
+          school = { name = "15 Temmuz Şehitleri Anadolu Lisesi" }
+          GPA = "70/100"
+        [[languages.tr.params.education.items]]
+          date = "2008-2015"
+          title = "İlkokul ve Ortaokul"
+          school = { name = "Sare Özkaşıkçı" }
+          GPA = "90/100"
+      [languages.tr.params.projects]
+        enable = false
+        title = "Projelerim"
+      [languages.tr.params.contact]
+        enable = true
+        title = "İletişime Geçin"
+        content = "Bir proje hakkında konuşmak, bir soru sormak veya sadece merhaba demek isterseniz, aşağıdaki butona tıklayarak bana bir e-posta gönderebilirsiniz."
+        email = "muhammedalielkiran@gmail.com"
+        btnName = "E-posta Gönder"
+        [languages.tr.params.contact.formspree]
+          enable = false
+
+  # 2. İNGİLİZCE DİL AYARLARI
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 2
+    title = "Muhammed Ali Elkıran"
+
+    [languages.en.params]
+      favicon = "/logo.png"
+      
+      [languages.en.params.social]
+        email = "muhammedalielkiran@gmail.com"
+      
+      [languages.en.params.theme]
+        disableThemeToggle = false
+      
+      [languages.en.params.color]
+        primaryColor = "#212529"
+        backgroundColor = "#ffffff"
+        textColor = "#212529"
+      
+      [languages.en.params.navbar]
+        align = "mx-auto"
+        disableSearch = true
+        brandLogo = "/logo.png"
+      
+      [languages.en.params.font]
+        fontSize = "1rem"
+        fontWeight = "700"
+        lineHeight = "1.6"
+
+      [languages.en.params.hero]
+        enable = true
+        intro = "Hello, I'm"
+        title = "Muhammed Ali Elkıran"
+        subtitle = "The Next Michelin Starred Chef"
+        content = "Hello! Welcome to my personal CV site where I showcase my skills and experience. You can learn more about me by Browse through my projects and reviewing my resume."
+        image = "images/ben_karsilama.jpg"
+        roundImage = false
+        [languages.en.params.hero.button]
+          enable = true
+          name = "View CV"
+          url = "/muhammed_cv.pdf"
+          newPage = true
+          download = false
+        [languages.en.params.hero.socialLinks]
+          [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
+            url = "https://www.instagram.com/cheffmalie"
+            icon = "fab fa-instagram"
+          [[languages.en.params.hero.socialLinks.fontAwesomeIcons]]
+            url = "mailto:muhammedalielkiran@gmail.com"
+            icon = "fas fa-envelope"
+
+      [languages.en.params.about]
+        enable = true
+        title = "About Me"
+        content = """
+Hello! I am Muhammed Ali Elkıran, a chef deeply passionate about my profession. Every moment I spend in the kitchen is a journey of discovery and creativity for me. My family has played a significant role in my embarking on this flavor-filled adventure. My connection with the kitchen, which began at a young age, eventually grew into a deep-seated passion.
+
+Although I studied software at university after a science-focused high school education, life has always drawn me back to the kitchen, a world ruled by scents, tastes, and textures. For me, the kitchen is not just a place for cooking; it is an artistic space where I solve problems, make big differences with small details, and showcase innovative approaches. I love to tell stories on every plate, make people happy, and leave a lasting impression with every bite.
+
+My biggest motivation in life is my family. Their support and love inspire me to push the boundaries in the kitchen. In every situation I face, whether in the kitchen or in life, I have adopted a solution-oriented and positive approach as my principle. Those who know me usually describe me as a reliable and determined person.
+
+This website is my personal portfolio where I showcase the creations I bring to life in the kitchen. Here, you will discover not only my dishes but also my culinary philosophy and creative process. My biggest goal? To one day become a global culinary artist by having my name written among the world's few Michelin-starred chefs.
+
+Thank you for accompanying me on my culinary journey!
+        """
+
+      [languages.en.params.experience]
+        enable = true
+        title = "Work Experience"
+        [[languages.en.params.experience.items]]
+          company = "Gloria Hotels & Resorts"
+          companyUrl = "https://www.gloria.com.tr/en/"
+          job = "Commis Chef"
+          date = "May 2024 - September 2024"
+          content = """
+* I took my first step into my cooking life in a hot kitchen.
+* Adapting to the kitchen 
+* Position : Commis
+          """
+          info = { content = "This is where I first stepped into the culinary profession." }
+          featuredLink = { enable = true, name = "2024 Season Gallery", url = "/#about" }
+        [[languages.en.params.experience.items]]
+          company = "Merit Hotels & Casino"
+          companyUrl = "https://www.merithotels.com/"
+          job = "Commis"
+          date = "October 2024 - Present"
+          content = """
+* I had the opportunity to meet different people in my cooking life.
+* Position: Commis
+          """
+          info = { content = "Then I continued my career here for 1 year."}
+          featuredLink = { enable = true, name = "2025 Season Gallery", url = "/#about" }
+          
+      [languages.en.params.education]
+        enable = true
+        title = "Education"
+        index = false
+        [[languages.en.params.education.items]]
+          date = "2020-2022"
+          title = "Konya Technical University PC Programming"
+          school = { name = "Konya Technical University", url = "https://www.ktun.edu.tr/" }
+          GPA = "2.60/4.00"
+          content = "* I stepped into the software world..."
+        [[languages.en.params.education.items]]
+          date = "2016 - 2020"
+          title = "Anatolian High School"
+          school = { name = "15 Temmuz Sehitleri Anatolian High School" }
+          GPA = "70/100"
+        [[languages.en.params.education.items]]
+          date = "2008-2015"
+          title = "Primary and Middle School"
+          school = { name = "Sare Özkaşıkçı" }
+          GPA = "90/100"
+
+      [languages.en.params.projects]
+        enable = false
+        title = "Projects"
+      
+      [languages.en.params.contact]
+        enable = true
+        title = "Get in Touch"
+        content = "If you want to talk about a project, ask a question, or just say hello, you can send me an email by clicking the button below."
+        email = "muhammedalielkiran@gmail.com"
+        btnName = "Send E-mail"
+        [languages.en.params.contact.formspree]
+          enable = false
