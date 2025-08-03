@@ -30,6 +30,7 @@ defaultContentLanguage = "tr"
         align = "mx-auto"
         disableSearch = true
         brandLogo = "/logo.png"
+        brandname = ""
       [languages.tr.params.font]
         fontSize = "1rem"
         fontWeight = "700"
@@ -39,10 +40,8 @@ defaultContentLanguage = "tr"
         intro = "Merhaba, ben"
         title = "Muhammed Ali Elkıran"
         subtitle = "Geleceğin Michellin Yıldızlı Şefi"
-        content = """
-        Merhaba! Yeteneklerimi ve deneyimlerimi sergilediğim kişisel CV siteme hoş geldiniz. 
-        Projelerime göz atarak ve özgeçmişimi inceleyerek hakkımda daha fazla bilgi edinebilirsiniz.
-        """
+        content = """Merhaba! Yeteneklerimi ve deneyimlerimi sergilediğim kişisel CV siteme hoş geldiniz. 
+        Projelerime göz atarak ve özgeçmişimi inceleyerek hakkımda daha fazla bilgi edinebilirsiniz."""
         image = "images/ben_karsilama.jpg"
         roundImage = false
         [languages.tr.params.hero.button]
@@ -144,7 +143,7 @@ Mutfak yolculuğumda bana eşlik ettiğiniz için teşekkür ederim!
         align = "mx-auto"
         disableSearch = true
         brandLogo = "/logo.png"
-      
+        brandname = ""
       [languages.en.params.font]
         fontSize = "1rem"
         fontWeight = "700"

@@ -44,12 +44,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Genel link rengi */
 a {
-  color: #212529; /* Siyah/Koyu Gri */
+  color: #212529  !important;/* Siyah/Koyu Gri */
 }
 
 /* Üzerine gelince link rengi */
 a:hover {
-  color: #000000; /* Saf Siyah */
+  color: #000000 !important; /* Saf Siyah */
 }
 
 
@@ -202,4 +202,8 @@ ama tutarlılık için kontrol edebilirsiniz. */
 
   /* Hafifçe yukarı kalkma efekti */
   transform: translateY(-2px);
+}
+/* Menüdeki linklerin (Dil değiştirici dahil) rengini düzeltme */
+#profileHeader .nav-link {
+  color: #212529 !important; /* Sitenin ana metin rengi (siyaha yakın gri) */
 }
