@@ -207,3 +207,7 @@ ama tutarlılık için kontrol edebilirsiniz. */
 #profileHeader .nav-link {
   color: #212529 !important; /* Sitenin ana metin rengi (siyaha yakın gri) */
 }
+/* Karanlık mod aktifken menüdeki yazıların görünür olması için */
+body.dark #profileHeader .nav-link {
+    color: #FFFFFF !important; /* Yazı rengini beyaz yap */
+}
