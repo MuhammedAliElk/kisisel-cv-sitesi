@@ -1,3 +1,5 @@
+# --- TEST config.yml (Lütfen eskisinin yerine bunu yapıştırın) ---
+
 # 1. Backend (Değişiklik Yok)
 backend:
   name: git-gateway
@@ -7,61 +9,14 @@ backend:
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
-# 3. KOLEKSİYONLAR (BASİTLEŞTİRİLMİŞ YAPI)
+# 3. KOLEKSİYON (SADECE BİR TEST KOLEKSİYONU)
+# Bu, Decap CMS'in çöküp çökmediğini anlamak içindir.
+# hugo.toml'a dokunmayacak.
 collections:
-  - name: "site_ayarlari" # Koleksiyon ID'si (basit)
-    label: "Site Ayarları (hugo.toml)" # Paneldeki başlık
-    files:
-      - label: "Ana Site İçeriği"
-        name: "hugo_config"
-        file: "hugo.toml" # Düzenlenecek dosya
-        format: "toml"
-        fields: # Düzenlenecek alanlar
-          
-          # --- TR BÖLÜMÜ ---
-          - label: "Türkçe İçerik"
-            name: "languages.tr" # [languages.tr] tablosunu hedefler
-            widget: "object"
-            fields:
-              - { label: "Site Başlığı (TR)", name: "title", widget: "string" }
-              - label: "Parametreler (TR)"
-                name: "params" # [languages.tr.params] tablosunu hedefler
-                widget: "object"
-                fields:
-                  - label: "Hero Bölümü (TR)" # [languages.tr.params.hero]
-                    name: "hero"
-                    widget: "object"
-                    fields:
-                      - { label: "Aktif mi?", name: "enable", widget: "boolean" }
-                      - { label: "Giriş (Merhaba, ben)", name: "intro", widget: "string" }
-                      - { label: "Ana Başlık", name: "title", widget: "string" }
-                      - { label: "Alt Başlık", name: "subtitle", widget: "string" }
-                      - { label: "İçerik Paragrafı", name: "content", widget: "markdown" }
-                      - { label: "Resim", name: "image", widget: "image" }
-                  
-                  - label: "Hakkımda Bölümü (TR)" # [languages.tr.params.about]
-                    name: "about"
-                    widget: "object"
-                    fields:
-                      - { label: "Aktif mi?", name: "enable", widget: "boolean" }
-                      - { label: "Bölüm Başlığı", name: "title", widget: "string" }
-                      - { label: "Hakkımda Metni", name: "content", widget: "markdown" }
-
-          # --- EN BÖLÜMÜ ---
-          - label: "English Content"
-            name: "languages.en" # [languages.en] tablosunu hedefler
-            widget: "object"
-            fields:
-              - { label: "Site Title (EN)", name: "title", widget: "string" }
-              - label: "Parameters (EN)"
-                name: "params" # [languages.en.params] tablosunu hedefler
-                widget: "object"
-                fields:
-                  - label: "Hero Section (EN)" # [languages.en.params.hero]
-                    name: "hero"
-                    widget: "object"
-                    fields:
-                      - { label: "Enabled?", name: "enable", widget: "boolean" }
-                      - { label: "Intro (Hello, I'm)", name: "intro", widget: "string" }
-                      - { label: "Main Title", name: "title", widget: "string" }
-                      - { label: "Subtitle", name: "subtitle", widget: "string" }
+  - name: "test_koleksiyonu"
+    label: "TEST (Bunu Görürseniz Çalışıyor)"
+    folder: "content/test" # Bu klasörün gerçekte var olmasına gerek yok
+    create: true
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "İçerik", name: "body", widget: "markdown" }
