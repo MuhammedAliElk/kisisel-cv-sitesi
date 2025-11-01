@@ -1,169 +1,67 @@
-# 1. BACKEND AYARI
-# Netlify'ın Git Gateway servisini ve 'main' branch'ini kullan.
-# Eğer ana branch'iniz 'master' ise, 'branch: main' satırını 'branch: master' yapın.
+# 1. Backend (Değişiklik Yok)
 backend:
   name: git-gateway
-  branch: main
+  branch: main # (Eğer 'master' ise değiştirin)
 
-# 2. MEDYA AYARI
-# Admin panelinden yüklenen resimler (örn: Hero resmi) buraya kaydedilecek.
+# 2. Medya (Değişiklik Yok)
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
-# 3. KOLEKSİYONLAR (SİTENİZİN İÇERİĞİ)
-# 'hugo.toml' dosyasını düzenlemek için 'files' (Dosyalar) koleksiyonu kullanıyoruz.
+# 3. KOLEKSİYONLAR (BASİTLEŞTİRİLMİŞ YAPI)
 collections:
-  - name: "site_icerikleri"
-    label: "Site İçerikleri"
+  - name: "site_ayarlari" # Koleksiyon ID'si (basit)
+    label: "Site Ayarları (hugo.toml)" # Paneldeki başlık
     files:
-      # --- TÜRKÇE İÇERİK BÖLÜMÜ ---
-      - label: "Türkçe Site İçeriği"
-        name: "tr_content"
-        file: "hugo.toml" # Ana yapılandırma dosyasını hedef al
-        format: "toml" # Dosya formatını toml olarak ayarla
-        fields:
-          # Genel TR site başlığı
-          - { label: "Site Başlığı (TR)", name: "languages.tr.title", widget: "string" }
-          
-          # Hero Bölümü (TR)
-          - label: "Hero Bölümü (TR)"
-            name: "languages.tr.params.hero"
-            widget: "object"
-            fields:
-              - { label: "Aktif mi?", name: "enable", widget: "boolean", default: true }
-              - { label: "Giriş (Merhaba, ben)", name: "intro", widget: "string" }
-              - { label: "Ana Başlık", name: "title", widget: "string" }
-              - { label: "Alt Başlık", name: "subtitle", widget: "string" }
-              - { label: "İçerik Paragrafı", name: "content", widget: "markdown" }
-              - { label: "Resim", name: "image", widget: "image" }
-
-          # Hakkımda Bölümü (TR)
-          - label: "Hakkımda Bölümü (TR)"
-            name: "languages.tr.params.about"
-            widget: "object"
-            fields:
-              - { label: "Aktif mi?", name: "enable", widget: "boolean", default: true }
-              - { label: "Bölüm Başlığı (Hakkımda)", name: "title", widget: "string" }
-              - { label: "Hakkımda Metni", name: "content", widget: "markdown" }
-
-          # İş Deneyimi Bölümü (TR)
-          - label: "İş Deneyimi Bölümü (TR)"
-            name: "languages.tr.params.experience"
-            widget: "object"
-            fields:
-              - { label: "Aktif mi?", name: "enable", widget: "boolean", default: true }
-              - { label: "Bölüm Başlığı (İş Deneyimlerim)", name: "title", widget: "string" }
-              - name: "items"
-                label: "Deneyim Listesi"
-                widget: "list"
-                fields:
-                  - { label: "Şirket Adı", name: "company", widget: "string" }
-                  - { label: "Şirket Linki (URL)", name: "companyUrl", widget: "string", required: false }
-                  - { label: "Pozisyon", name: "job", widget: "string" }
-                  - { label: "Tarih Aralığı", name: "date", widget: "string" }
-                  - { label: "Açıklama (Maddeler)", name: "content", widget: "markdown" }
-                  - { label: "Ek Bilgi", name: "info.content", widget: "string", required: false }
-
-          # Eğitim Bölümü (TR)
-          - label: "Eğitim Bölümü (TR)"
-            name: "languages.tr.params.education"
-            widget: "object"
-            fields:
-              - { label: "Aktif mi?", name: "enable", widget: "boolean", default: true }
-              - { label: "Bölüm Başlığı (Eğitim Geçmişim)", name: "title", widget: "string" }
-              - name: "items"
-                label: "Eğitim Listesi"
-                widget: "list"
-                fields:
-                  - { label: "Tarih", name: "date", widget: "string" }
-                  - { label: "Başlık (Bölüm/Okul)", name: "title", widget: "string" }
-                  - { label: "Okul Adı", name: "school.name", widget: "string" }
-                  - { label: "Okul Linki (URL)", name: "school.url", widget: "string", required: false }
-                  - { label: "Not Ortalaması (GPA)", name: "GPA", widget: "string", required: false }
-                  - { label: "Açıklama", name: "content", widget: "markdown", required: false }
-
-          # İletişim Bölümü (TR)
-          - label: "İletişim Bölümü (TR)"
-            name: "languages.tr.params.contact"
-            widget: "object"
-            fields:
-              - { label: "Aktif mi?", name: "enable", widget: "boolean", default: true }
-              - { label: "Bölüm Başlığı (İletişime Geçin)", name: "title", widget: "string" }
-              - { label: "İçerik", name: "content", widget: "text" }
-              - { label: "Buton Metni", name: "btnName", widget: "string" }
-
-      # --- İNGİLİZCE İÇERİK BÖLÜMÜ ---
-      - label: "English Site Content"
-        name: "en_content"
-        file: "hugo.toml"
+      - label: "Ana Site İçeriği"
+        name: "hugo_config"
+        file: "hugo.toml" # Düzenlenecek dosya
         format: "toml"
-        fields:
-          # Genel EN site başlığı
-          - { label: "Site Title (EN)", name: "languages.en.title", widget: "string" }
+        fields: # Düzenlenecek alanlar
           
-          # Hero Bölümü (EN)
-          - label: "Hero Section (EN)"
-            name: "languages.en.params.hero"
+          # --- TR BÖLÜMÜ ---
+          - label: "Türkçe İçerik"
+            name: "languages.tr" # [languages.tr] tablosunu hedefler
             widget: "object"
             fields:
-              - { label: "Enabled?", name: "enable", widget: "boolean", default: true }
-              - { label: "Intro (Hello, I'm)", name: "intro", widget: "string" }
-              - { label: "Main Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "Content Paragraph", name: "content", widget: "markdown" }
-              - { label: "Image", name: "image", widget: "image" }
-
-          # Hakkımda Bölümü (EN)
-          - label: "About Me Section (EN)"
-            name: "languages.en.params.about"
-            widget: "object"
-            fields:
-              - { label: "Enabled?", name: "enable", widget: "boolean", default: true }
-              - { label: "Section Title (About Me)", name: "title", widget: "string" }
-              - { label: "About Me Text", name: "content", widget: "markdown" }
-
-          # İş Deneyimi Bölümü (EN)
-          - label: "Work Experience Section (EN)"
-            name: "languages.en.params.experience"
-            widget: "object"
-            fields:
-              - { label: "Enabled?", name: "enable", widget: "boolean", default: true }
-              - { label: "Section Title (Work Experience)", name: "title", widget: "string" }
-              - name: "items"
-                label: "Experience List"
-                widget: "list"
+              - { label: "Site Başlığı (TR)", name: "title", widget: "string" }
+              - label: "Parametreler (TR)"
+                name: "params" # [languages.tr.params] tablosunu hedefler
+                widget: "object"
                 fields:
-                  - { label: "Company Name", name: "company", widget: "string" }
-                  - { label: "Company URL", name: "companyUrl", widget: "string", required: false }
-                  - { label: "Job Title", name: "job", widget: "string" }
-                  - { label: "Date Range", name: "date", widget: "string" }
-                  - { label: "Description (Bullets)", name: "content", widget: "markdown" }
-                  - { label: "Extra Info", name: "info.content", widget: "string", required: false }
+                  - label: "Hero Bölümü (TR)" # [languages.tr.params.hero]
+                    name: "hero"
+                    widget: "object"
+                    fields:
+                      - { label: "Aktif mi?", name: "enable", widget: "boolean" }
+                      - { label: "Giriş (Merhaba, ben)", name: "intro", widget: "string" }
+                      - { label: "Ana Başlık", name: "title", widget: "string" }
+                      - { label: "Alt Başlık", name: "subtitle", widget: "string" }
+                      - { label: "İçerik Paragrafı", name: "content", widget: "markdown" }
+                      - { label: "Resim", name: "image", widget: "image" }
+                  
+                  - label: "Hakkımda Bölümü (TR)" # [languages.tr.params.about]
+                    name: "about"
+                    widget: "object"
+                    fields:
+                      - { label: "Aktif mi?", name: "enable", widget: "boolean" }
+                      - { label: "Bölüm Başlığı", name: "title", widget: "string" }
+                      - { label: "Hakkımda Metni", name: "content", widget: "markdown" }
 
-          # Eğitim Bölümü (EN)
-          - label: "Education Section (EN)"
-            name: "languages.en.params.education"
+          # --- EN BÖLÜMÜ ---
+          - label: "English Content"
+            name: "languages.en" # [languages.en] tablosunu hedefler
             widget: "object"
             fields:
-              - { label: "Enabled?", name: "enable", widget: "boolean", default: true }
-              - { label: "Section Title (Education)", name: "title", widget: "string" }
-              - name: "items"
-                label: "Education List"
-                widget: "list"
+              - { label: "Site Title (EN)", name: "title", widget: "string" }
+              - label: "Parameters (EN)"
+                name: "params" # [languages.en.params] tablosunu hedefler
+                widget: "object"
                 fields:
-                  - { label: "Date", name: "date", widget: "string" }
-                  - { label: "Title (Degree/School)", name: "title", widget: "string" }
-                  - { label: "School Name", name: "school.name", widget: "string" }
-                  - { label: "School URL", name: "school.url", widget: "string", required: false }
-                  - { label: "GPA", name: "GPA", widget: "string", required: false }
-                  - { label: "Description", name: "content", widget: "markdown", required: false }
-
-          # İletişim Bölümü (EN)
-          - label: "Contact Section (EN)"
-            name: "languages.en.params.contact"
-            widget: "object"
-            fields:
-              - { label: "Enabled?", name: "enable", widget: "boolean", default: true }
-              - { label: "Section Title (Get in Touch)", name: "title", widget: "string" }
-              - { label: "Content", name: "content", widget: "text" }
-              - { label: "Button Name", name: "btnName", widget: "string" }
+                  - label: "Hero Section (EN)" # [languages.en.params.hero]
+                    name: "hero"
+                    widget: "object"
+                    fields:
+                      - { label: "Enabled?", name: "enable", widget: "boolean" }
+                      - { label: "Intro (Hello, I'm)", name: "intro", widget: "string" }
+                      - { label: "Main Title", name: "title", widget: "string" }
+                      - { label: "Subtitle", name: "subtitle", widget: "string" }
