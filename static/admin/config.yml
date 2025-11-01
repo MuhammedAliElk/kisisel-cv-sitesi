@@ -1,50 +1,44 @@
-# --- NİHAİ config.yml (Gerçek Site İçeriği) ---
+# --- NİHAİ DÜZELTİLMİŞ config.yml (Tek Dosya Koleksiyonu) ---
 
-# 1. Backend (Değişiklik Yok)
 backend:
   name: git-gateway
   branch: main # (Eğer 'master' ise değiştirin)
 
-# 2. Medya (Değişiklik Yok)
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
-# 3. Koleksiyonlar (hugo.toml'u düzenle)
-# Bu sefer tek bir koleksiyon ve 'files' (dosyalar) yapısını kullanıyoruz.
 collections:
   - name: "site_icerikleri"
-    label: "Site İçerikleri (TR ve EN)"
-    # 'files' kullanarak aynı anda birden fazla dosyayı
-    # (veya aynı dosyanın farklı bölümlerini) yönetebiliriz.
+    label: "Site İçerikleri (hugo.toml)"
     files:
-      # --- TÜRKÇE İÇERİK BÖLÜMÜ ---
-      - label: "Türkçe Site İçeriği"
-        name: "tr_content"
-        file: "hugo.toml" # Ana yapılandırma dosyasını hedef al
-        format: "toml" # Dosya formatını toml olarak ayarla
+      # Sadece BİR dosya tanımlıyoruz: hugo.toml
+      # Hem TR hem EN alanları bu tek tanımın içinde olacak.
+      - label: "Ana Site İçeriği (TR ve EN)"
+        name: "hugo_config"
+        file: "hugo.toml"
+        format: "toml"
         fields:
-          # ÖNEMLİ: Decap CMS'in TOML listelerini doğru işlemesi için
-          # 'fields' yapısını tam olarak hugo.toml'daki sırayla
-          # ve doğru 'name' (isim) ile eşleştirmemiz gerekiyor.
-          
-          # [languages.tr.params.hero]
-          - { label: "TR Hero Bölümü", name: "languages.tr.params.hero", widget: "object", fields: [
-              { label: "Aktif mi?", name: "enable", widget: "boolean" },
-              { label: "Giriş (Merhaba, ben)", name: "intro", widget: "string" },
-              { label: "Ana Başlık", name: "title", widget: "string" },
-              { label: "Alt Başlık", name: "subtitle", widget: "string" },
-              { label: "İçerik Paragrafı", name: "content", widget: "markdown" },
-              { label: "Resim", name: "image", widget: "image" }
-            ]}
-          
-          # [languages.tr.params.about]
-          - { label: "TR Hakkımda Bölümü", name: "languages.tr.params.about", widget: "object", fields: [
-              { label: "Aktif mi?", name: "enable", widget: "boolean" },
-              { label: "Bölüm Başlığı", name: "title", widget: "string" },
-              { label: "Hakkımda Metni", name: "content", widget: "markdown" }
-            ]}
 
-          # [[languages.tr.params.experience.items]]
+          # --- TÜRKÇE ALANLAR ---
+          - label: "TR Hero Bölümü"
+            name: "languages.tr.params.hero"
+            widget: "object"
+            fields:
+              - { label: "Aktif mi?", name: "enable", widget: "boolean" }
+              - { label: "Giriş (Merhaba, ben)", name: "intro", widget: "string" }
+              - { label: "Ana Başlık", name: "title", widget: "string" }
+              - { label: "Alt Başlık", name: "subtitle", widget: "string" }
+              - { label: "İçerik Paragrafı", name: "content", widget: "markdown" }
+              - { label: "Resim", name: "image", widget: "image" }
+
+          - label: "TR Hakkımda Bölümü"
+            name: "languages.tr.params.about"
+            widget: "object"
+            fields:
+              - { label: "Aktif mi?", name: "enable", widget: "boolean" }
+              - { label: "Bölüm Başlığı", name: "title", widget: "string" }
+              - { label: "Hakkımda Metni", name: "content", widget: "markdown" }
+
           - label: "TR İş Deneyimi"
             name: "languages.tr.params.experience"
             widget: "object"
@@ -63,7 +57,6 @@ collections:
                   - { label: "Ek Bilgi (Info)", name: "info", widget: "object", fields: [{label: "İçerik", name: "content", widget: "string"}]}
                   - { label: "Öne Çıkan Link", name: "featuredLink", widget: "object", fields: [{label: "Aktif mi?", name: "enable", widget: "boolean"}, {label: "Yazı", name: "name", widget: "string"}, {label: "URL", name: "url", widget: "string"}]}
 
-          # [[languages.tr.params.education.items]]
           - label: "TR Eğitim"
             name: "languages.tr.params.education"
             widget: "object"
@@ -79,8 +72,7 @@ collections:
                   - { label: "Okul", name: "school", widget: "object", fields: [{label: "Okul Adı", name: "name", widget: "string"}, {label: "Okul URL", name: "url", widget: "string", required: false}]}
                   - { label: "Not Ortalaması (GPA)", name: "GPA", widget: "string", required: false }
                   - { label: "Açıklama", name: "content", widget: "markdown", required: false }
-          
-          # [languages.tr.params.contact]
+
           - { label: "TR İletişim Bölümü", name: "languages.tr.params.contact", widget: "object", fields: [
               { label: "Aktif mi?", name: "enable", widget: "boolean" },
               { label: "Bölüm Başlığı", name: "title", widget: "string" },
@@ -88,36 +80,32 @@ collections:
               { label: "Buton Metni", name: "btnName", widget: "string" }
             ]}
 
-      # --- İNGİLİZCE İÇERİK BÖLÜMÜ ---
-      - label: "English Site Content"
-        name: "en_content"
-        file: "hugo.toml"
-        format: "toml"
-        fields:
-          # [languages.en.params.hero]
-          - { label: "EN Hero Section", name: "languages.en.params.hero", widget: "object", fields: [
-              { label: "Enabled?", name: "enable", widget: "boolean" },
-              { label: "Intro (Hello, I'm)", name: "intro", widget: "string" },
-              { label: "Main Title", name: "title", widget: "string" },
-              { label: "Subtitle", name: "subtitle", widget: "string" },
-              { label: "Content Paragraph", name: "content", widget: "markdown" },
-              { label: "Image", name: "image", widget: "image" }
-            ]}
-          
-          # [languages.en.params.about]
-          - { label: "EN About Me Section", name: "languages.en.params.about", widget: "object", fields: [
-              { label: "Enabled?", name: "enable", widget: "boolean" },
-              { label: "Section Title", name: "title", widget: "string" },
-              { label: "About Me Text", name: "content", widget: "markdown" }
-            ]}
-            
-          # [[languages.en.params.experience.items]]
+          # --- İNGİLİZCE ALANLAR ---
+          - label: "EN Hero Section"
+            name: "languages.en.params.hero"
+            widget: "object"
+            fields:
+              - { label: "Enabled?", name: "enable", widget: "boolean" }
+              - { label: "Intro (Hello, I'm)", name: "intro", widget: "string" }
+              - { label: "Main Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Content Paragraph", name: "content", widget: "markdown" }
+              - { label: "Image", name: "image", widget: "image" }
+
+          - label: "EN About Me Section"
+            name: "languages.en.params.about"
+            widget: "object"
+            fields:
+              - { label: "Enabled?", name: "enable", widget: "boolean" }
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "About Me Text", name: "content", widget: "markdown" }
+
           - label: "EN Work Experience"
             name: "languages.en.params.experience"
             widget: "object"
             fields:
               - { label: "Enabled?", name: "enable", widget: "boolean" }
-              - { label: "Section Title", name: "title", widget: "string" }
+              - { label:V "Section Title", name: "title", widget: "string" }
               - name: "items"
                 label: "Experience List"
                 widget: "list"
@@ -129,8 +117,7 @@ collections:
                   - { label: "Description (Bullets)", name: "content", widget: "markdown" }
                   - { label: "Extra Info (Info)", name: "info", widget: "object", fields: [{label: "Content", name: "content", widget: "string"}]}
                   - { label: "Featured Link", name: "featuredLink", widget: "object", fields: [{label: "Enable?", name: "enable", widget: "boolean"}, {label: "Name", name: "name", widget: "string"}, {label: "URL", name: "url", widget: "string"}]}
-          
-          # [[languages.en.params.education.items]]
+
           - label: "EN Education"
             name: "languages.en.params.education"
             widget: "object"
@@ -147,7 +134,6 @@ collections:
                   - { label: "GPA", name: "GPA", widget: "string", required: false }
                   - { label: "Description", name: "content", widget: "markdown", required: false }
 
-          # [languages.en.params.contact]
           - { label: "EN Contact Section", name: "languages.en.params.contact", widget: "object", fields: [
               { label: "Enabled?", name: "enable", widget: "boolean" },
               { label: "Section Title", name: "title", widget: "string" },
