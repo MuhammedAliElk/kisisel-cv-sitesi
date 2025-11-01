@@ -1,21 +1,13 @@
-# --- TEST config.yml (Lütfen eskisinin yerine bunu yapıştırın) ---
-
-# 1. Backend (Değişiklik Yok)
+# --- config.yml dosyanızın içeriği BU OLMALI (TEST İÇİN) ---
 backend:
   name: git-gateway
-  branch: main # (Eğer 'master' ise değiştirin)
-
-# 2. Medya (Değişiklik Yok)
+  branch: main
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
-
-# 3. KOLEKSİYON (SADECE BİR TEST KOLEKSİYONU)
-# Bu, Decap CMS'in çöküp çökmediğini anlamak içindir.
-# hugo.toml'a dokunmayacak.
 collections:
   - name: "test_koleksiyonu"
     label: "TEST (Bunu Görürseniz Çalışıyor)"
-    folder: "content/test" # Bu klasörün gerçekte var olmasına gerek yok
+    folder: "content/test" # Bu klasörün var olması gerekmez
     create: true
     fields:
       - { label: "Başlık", name: "title", widget: "string" }
