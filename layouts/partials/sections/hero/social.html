@@ -1,10 +1,10 @@
 {{/* Veri değişkenini (dict "data" $data) iletilen parametreden alıyoruz */}}
 {{ $data := .data }}
 
+{{/* 'ms-3' sınıfı buton ile ikonlar arasına boşluk ekler */}}
 <span class="ms-3">
     {{ range $data.hero.socialLinks.fontAwesomeIcons }}
     <span class="px-1">
-        {{/* DEĞİŞTİ: class="btn social-icon" yerine class="hero-social-link" kullanıldı */}}
         <a href="{{ .url }}"
             {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
             class="hero-social-link"
@@ -16,7 +16,6 @@
 
     {{ range $data.hero.socialLinks.customIcons }}
     <span class="px-1">
-        {{/* DEĞİŞTİ: class="btn social-icon" yerine class="hero-social-link" kullanıldı */}}
         <a href="{{ .url }}"
             {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
             class="hero-social-link"
