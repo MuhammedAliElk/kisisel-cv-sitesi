@@ -18,20 +18,23 @@
                 <p class="hero-content">
                     {{ $data.hero.content | markdownify }}
                 </p>
-                <div class="row">
-                    <div class="col-auto h-100">
-                        {{ if $data.hero.button.enable }}
-                        {{/* DÜZELTİLMİŞ a etiketi: 'cond' fonksiyonu artık 3 argümanlı */}}
-                        <a href="{{ $data.hero.button.url }}" class="btn" {{ if $data.hero.button.newPage | default true }}target="_blank"{{ end }} {{ cond $data.hero.button.download "download" "" }}>
-                            {{ $data.hero.button.name }}
-                        </a>
-                        {{ end }}
-                    </div>
-                    <div class="col-auto px-0 h-100">
-                        {{/* 'social.html' partial'ına $data değişkenini aktarıyoruz */}}
-                        {{- partial "sections/hero/social.html" (dict "data" $data "context" .) -}}
-                    </div>
-                </div>
+<div class="row">
+    {{/* YENİ: İki 'col-auto' birleştirildi ve dikey ortalama (align-items-center) eklendi */}}
+    <div class="col-auto h-100 d-flex align-items-center">
+
+        {{/* CV Butonu */}}
+        {{ if $data.hero.button.enable }}
+        <a href="{{ $data.hero.button.url }}" class="btn" {{ if $data.hero.button.newPage | default true }}target="_blank"{{ end }} {{ cond $data.hero.button.download "download" "" }}>
+            {{ $data.hero.button.name }}
+        </a>
+        {{ end }}
+
+        {{/* Sosyal ikonlar artık CV butonunun YANINDA, aynı div içinde */}}
+        {{- partial "sections/hero/social.html" (dict "data" $data "context" .) -}}
+
+    </div>
+    {{/* İkinci 'col-auto' div'i artık silindi */}}
+</div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-4">
                 <div class="row justify-content-center">
