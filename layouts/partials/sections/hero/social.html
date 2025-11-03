@@ -1,0 +1,28 @@
+{{/* Veri değişkenini (dict "data" $data) iletilen parametreden alıyoruz */}}
+{{ $data := .data }}
+
+<span>
+    {{/* DEĞİŞTİ: .Site.Params.hero.socialLinks yerine $data.hero.socialLinks kullanıyoruz */}}
+    {{ range $data.hero.socialLinks.fontAwesomeIcons }}
+    <span class="px-1">
+        <a href="{{ .url }}"
+            {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
+            class="btn social-icon"
+        >
+            <i class="{{ .icon }}"></i>
+        </a>
+    </span>
+    {{ end }}
+
+    {{/* DEĞİŞTİ: .Site.Params.hero.socialLinks yerine $data.hero.socialLinks kullanıyoruz */}}
+    {{ range $data.hero.socialLinks.customIcons }}
+    <span class="px-1">
+        <a href="{{ .url }}"
+            {{ if not (hasPrefix .url "#") }} target="_blank" {{ end }}
+            class="btn social-icon"
+        >
+            <img src="{{ .icon }}">
+        </a>
+    </span>
+    {{ end }}
+</span>

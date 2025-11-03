@@ -1,0 +1,31 @@
+{{/* Veri değişkenini data/homepage_tr.yml veya data/homepage_en.yml'den yüklüyoruz */}}
+{{ $data := (index .Site.Data (printf "homepage_%s" .Lang)) }}
+
+{{ if $data.about.enable | default false }}
+<section id="about" class="py-0 py-sm-5">
+    <div class="container bg-transparent">
+        <h3 class="text-center bg-transparent">{{ $data.about.title }}</h3>
+        <div class="bg-transparent row justify-content-center px-3 py-5">
+            {{ if $data.about.image }}
+            <div class="col-sm-12 col-md-8 col-lg-4 mb-5 mb-sm-0 mb-md-5 mb-lg-0 d-none d-sm-none d-md-block">
+                <div class="image d-flex px-5">
+                    <img src="{{ $data.about.image }}" class="img-thumbnail mx-auto rounded-circle" alt="">
+                </div>
+            </div>
+            {{ end }}
+            <div class="col-sm-12 col-md-12 col-lg-8 content">
+                {{ $data.about.content | markdownify }}
+
+                {{ if $data.about.skills.enable }}
+                {{ $data.about.skills.title }}
+                <ul>
+                    {{ range $data.about.skills.items }}
+                    <li>{{ . | markdownify }}</li>
+                    {{ end }}
+                </ul>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
