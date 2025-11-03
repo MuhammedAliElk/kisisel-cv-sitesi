@@ -37,7 +37,6 @@ collections:
               { label: "Aktif mi?", name: "enable", widget: "boolean" },
               { label: "Bölüm Başlığı", name: "title", widget: "string" },
               { label: "Hakkımda Metni", name: "content", widget: "markdown" }
-              # Not: 'skills' (yetenekler) bölümü data/homepage_tr.yml'de yoktu, isterseniz ekleyebiliriz.
             ]}
           - { label: "İş Deneyimi", name: "experience", widget: "object", fields: [
               { label: "Aktif mi?", name: "enable", widget: "boolean" },
@@ -90,4 +89,33 @@ collections:
               { label: "Section Title", name: "title", widget: "string" },
               { label: "About Me Text", name: "content", widget: "markdown" }
             ]}
-          # ... (İngilizce Deneyim, Eğitim, İletişim alanları buraya eklenecek) ...
+          - { label: "EN Work Experience", name: "experience", widget: "object", fields: [
+              { label: "Enabled?", name: "enable", widget: "boolean" },
+              { label: "Section Title", name: "title", widget: "string" },
+              { name: "items", label: "Experience List", widget: "list", fields: [
+                  { label: "Company Name", name: "company", widget: "string" },
+                  { label: "Company URL", name: "companyUrl", widget: "string", required: false },
+                  { label: "Job Title", name: "job", widget: "string" },
+                  { label: "Date Range", name: "date", widget: "string" },
+                  { label: "Description (Bullets)", name: "content", widget: "markdown" },
+                  { label: "Extra Info (Info)", name: "info", widget: "object", fields: [{label: "Content", name: "content", widget: "string"}]},
+                  { label: "Featured Link", name: "featuredLink", widget: "object", fields: [{label: "Enable?", name: "enable", widget: "boolean"}, {label: "Name", name: "name", widget: "string"}, {label: "URL", name: "url", widget: "string"}]}
+              ]}
+            ]}
+          - { label: "EN Education", name: "education", widget: "object", fields: [
+              { label: "Enabled?", name: "enable", widget: "boolean" },
+              { label: "Section Title", name: "title", widget: "string" },
+              { name: "items", label: "Education List", widget: "list", fields: [
+                  { label: "Date", name: "date", widget: "string" },
+                  { label: "Title (Degree/School)", name: "title", widget: "string" },
+                  { label: "School", name: "school", widget: "object", fields: [{label: "School Name", name: "name", widget: "string"}, {label: "School URL", name: "url", widget: "string", required: false}]},
+                  { label: "GPA", name: "GPA", widget: "string", required: false },
+                  { label: "Description", name: "content", widget: "markdown", required: false }
+              ]}
+            ]}
+          - { label: "EN Contact Section", name: "contact", widget: "object", fields: [
+              { label: "Enabled?", name: "enable", widget: "boolean" },
+              { label: "Section Title", name: "title", widget: "string" },
+              { label: "Content", name: "content", widget: "text" },
+              { label: "Button Name", name: "btnName", widget: "string" }
+            ]}
