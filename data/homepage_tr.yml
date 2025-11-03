@@ -2,7 +2,7 @@ hero:
   enable: true
   socialLinks:
     fontAwesomeIcons:
-      - url: https://www.instagram.com/cheffmalie
+      - url: https://www.instagram.com/elkirannn
         icon: fab fa-instagram
       - url: mailto:muhammedalielkiran@gmail.com
         icon: fas fa-envelope
