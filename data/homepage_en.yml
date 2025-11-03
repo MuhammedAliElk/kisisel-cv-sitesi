@@ -1,4 +1,4 @@
-# Bu dosya /data/homepage_en.yml (GERÇEKTEN TEMİZLENMİŞ KOD)
+# TEST: Bu satır, Git'in değişikliği görmesini sağlamak içindir.
 
 hero:
   enable: true
