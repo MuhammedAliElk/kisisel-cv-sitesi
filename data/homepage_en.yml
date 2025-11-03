@@ -1,0 +1,107 @@
+# Bu dosya /data/homepage_en.yml
+# hugo.toml'daki İngilizce içeriğinizin YML formatına dönüştürülmüş hali
+
+hero:
+  enable: true
+  intro: "Hello, I'm"
+  title: "Muhammed Ali Elkıran"
+  subtitle: "The Next Michelin Starred Chef"
+  content: |
+    Hello! Welcome to my personal CV site where I showcase my skills and experience. You can learn more about me by Browse through my projects and reviewing my resume.
+  image: images/ben_karsilama.jpg
+  roundImage: false
+  button:
+    enable: true
+    name: "View CV"
+    url: /muhammed_cv.pdf
+    newPage: true
+    download: false
+  socialLinks:
+    fontAwesomeIcons:
+      - url: https://www.instagram.com/cheffmalie
+        icon: fab fa-instagram
+      - url: mailto:muhammedalielkiran@gmail.com
+        icon: fas fa-envelope
+
+about:
+  enable: true
+  title: "About Me"
+  content: |
+    Hello! I am Muhammed Ali Elkıran, a chef deeply passionate about my profession. Every moment I spend in the kitchen is a journey of discovery and creativity for me. My family has played a significant role in my embarking on this flavor-filled adventure. My connection with the kitchen, which began at a young age, eventually grew into a deep-seated passion.
+
+    Although I studied software at university after a science-focused high school education, life has always drawn me back to the kitchen, a world ruled by scents, tastes, and textures. For me, the kitchen is not just a place for cooking; it is an artistic space where I solve problems, make big differences with small details, and showcase innovative approaches. I love to tell stories on every plate, make people happy, and leave a lasting impression with every bite.
+
+    My biggest motivation in life is my family. Their support and love inspire me to push the boundaries in the kitchen. In every situation I face, whether in the kitchen or in life, I have adopted a solution-oriented and positive approach as my principle. Those who know me usually describe me as a reliable and determined person.
+
+    This website is my personal portfolio where I showcase the creations I bring to life in the kitchen. Here, you will discover not only my dishes but also my culinary philosophy and creative process. My biggest goal? To one day become a global culinary artist by having my name written among the world's few Michelin-starred chefs.
+
+    Thank you for accompanying me on my culinary journey!
+
+experience:
+  enable: true
+  title: "Work Experience"
+  items:
+    - company: "Gloria Hotels & Resorts"
+      companyUrl: "https://www.gloria.com.tr/en/"
+      job: "Commis Chef"
+      date: "May 2024 - September 2024"
+      content: |
+        * I took my first step into my cooking life in a hot kitchen.
+        * Adapting to the kitchen 
+        * Position : Commis
+      info:
+        content: "This is where I first stepped into the culinary profession."
+      featuredLink:
+        enable: true
+        name: "2024 Season Gallery"
+        url: "/#about"
+    - company: "Merit Hotels & Casino"
+      companyUrl: "https://www.merithotels.com/"
+      job: "Commis"
+      date: "October 2024 - Present"
+      content: |
+        * I had the opportunity to meet different people in my cooking life.
+        * Position: Commis
+      info:
+        content: "Then I continued my career here for 1 year."
+      featuredLink:
+        enable: true
+        name: "2025 Season Gallery"
+        url: "/#about"
+        
+education:
+  enable: true
+  title: "Education"
+  index: false
+  items:
+    - date: "2020-2022"
+      title: "Konya Technical University PC Programming"
+      school:
+        name: "Konya Technical University"
+        url: "https://www.ktun.edu.tr/"
+      GPA: "2.60/4.00"
+      content: |
+        * I stepped into the software world...
+    - date: "2016 - 2020"
+      title: "Anatolian High School"
+      school:
+        name: "15 Temmuz Sehitleri Anatolian High School"
+      GPA: "70/100"
+    - date: "2008-2015"
+      title: "Primary and Middle School"
+      school:
+        name: "Sare Özkaşıkçı"
+      GPA: "90/100"
+
+projects:
+  enable: false
+  title: "Projects"
+  
+contact:
+  enable: true
+  title: "Get in Touch"
+  content: "If you want to talk about a project, ask a question, or just say hello, you can send me an email by clicking the button below."
+  email: "muhammedalielkiran@gmail.com"
+  btnName: "Send E-mail"
+  formspree:
+    enable: false

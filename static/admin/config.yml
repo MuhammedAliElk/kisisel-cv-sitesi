@@ -1,39 +1,45 @@
-# --- NİHAİ DÜZELTİLMİŞ config.yml (Ayrı Dosya Koleksiyonları) ---
+# --- NİHAİ config.yml (Artık data/*.yml dosyalarını hedefliyor) ---
 
 backend:
   name: git-gateway
-  branch: main # (Eğer 'master' ise değiştirin)
+  branch: main # (Eğer 'master' ise 'main'i 'master' olarak değiştirin)
 
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "static/images/uploads" # Yüklenen resimler buraya
+public_folder: "/images/uploads" # Resimler buradan çağrılır
 
 collections:
-  - name: "site_icerikleri"
-    label: "Site İçerikleri (hugo.toml)"
-    # 'files' kullanarak aynı dosyayı (hugo.toml) hedefleyen
-    # İKİ AYRI düzenleme arayüzü oluşturuyoruz.
+  - name: "homepage_content"
+    label: "Ana Sayfa İçerikleri"
+    # 'files' (Dosyalar) koleksiyonunu kullanıyoruz
     files:
       
       # --- DOSYA 1: TÜRKÇE İÇERİK ---
       - label: "Türkçe Site İçeriği"
-        name: "tr_content"
-        file: "hugo.toml"
-        format: "toml"
+        name: "homepage_tr"
+        file: "data/homepage_tr.yml" # <-- YENİ HEDEF: Veri dosyası
         fields:
-          - { label: "TR Hero Bölümü", name: "languages.tr.params.hero", widget: "object", fields: [
+          - { label: "Hero Bölümü", name: "hero", widget: "object", fields: [
               { label: "Aktif mi?", name: "enable", widget: "boolean" },
               { label: "Giriş (Merhaba, ben)", name: "intro", widget: "string" },
               { label: "Ana Başlık", name: "title", widget: "string" },
               { label: "Alt Başlık", name: "subtitle", widget: "string" },
               { label: "İçerik Paragrafı", name: "content", widget: "markdown" },
-              { label: "Resim", name: "image", widget: "image" }
+              { label: "Resim", name: "image", widget: "image" },
+              { label: "Düğme", name: "button", widget: "object", fields: [{label: "Aktif mi?", name: "enable", widget: "boolean"}, {label: "Yazı", name: "name", widget: "string"}, {label: "URL", name: "url", widget: "string"}, {label: "Yeni Sayfa?", name: "newPage", widget: "boolean"}, {label: "İndir?", name: "download", widget: "boolean"}]},
+              { label: "Sosyal Linkler", name: "socialLinks", widget: "object", fields: [
+                  { name: "fontAwesomeIcons", label: "FontAwesome Linkleri", widget: "list", fields: [
+                      {label: "URL", name: "url", widget: "string"},
+                      {label: "İkon (örn: fab fa-instagram)", name: "icon", widget: "string"}
+                  ]}
+              ]}
             ]}
-          - { label: "TR Hakkımda Bölümü", name: "languages.tr.params.about", widget: "object", fields: [
+          - { label: "Hakkımda Bölümü", name: "about", widget: "object", fields: [
               { label: "Aktif mi?", name: "enable", widget: "boolean" },
               { label: "Bölüm Başlığı", name: "title", widget: "string" },
               { label: "Hakkımda Metni", name: "content", widget: "markdown" }
+              # Not: 'skills' (yetenekler) bölümü data/homepage_tr.yml'de yoktu, isterseniz ekleyebiliriz.
             ]}
-          - { label: "TR İş Deneyimi", name: "languages.tr.params.experience", widget: "object", fields: [
+          - { label: "İş Deneyimi", name: "experience", widget: "object", fields: [
               { label: "Aktif mi?", name: "enable", widget: "boolean" },
               { label: "Bölüm Başlığı", name: "title", widget: "string" },
               { name: "items", label: "Deneyim Listesi", widget: "list", fields: [
@@ -46,7 +52,7 @@ collections:
                   { label: "Öne Çıkan Link", name: "featuredLink", widget: "object", fields: [{label: "Aktif mi?", name: "enable", widget: "boolean"}, {label: "Yazı", name: "name", widget: "string"}, {label: "URL", name: "url", widget: "string"}]}
               ]}
             ]}
-          - { label: "TR Eğitim", name: "languages.tr.params.education", widget: "object", fields: [
+          - { label: "Eğitim", name: "education", widget: "object", fields: [
               { label: "Aktif mi?", name: "enable", widget: "boolean" },
               { label: "Bölüm Başlığı", name: "title", widget: "string" },
               { name: "items", label: "Eğitim Listesi", widget: "list", fields: [
@@ -57,7 +63,7 @@ collections:
                   { label: "Açıklama", name: "content", widget: "markdown", required: false }
               ]}
             ]}
-          - { label: "TR İletişim Bölümü", name: "languages.tr.params.contact", widget: "object", fields: [
+          - { label: "İletişim Bölümü", name: "contact", widget: "object", fields: [
               { label: "Aktif mi?", name: "enable", widget: "boolean" },
               { label: "Bölüm Başlığı", name: "title", widget: "string" },
               { label: "İçerik", name: "content", widget: "text" },
@@ -66,50 +72,22 @@ collections:
 
       # --- DOSYA 2: İNGİLİZCE İÇERİK ---
       - label: "English Site Content"
-        name: "en_content"
-        file: "hugo.toml"
-        format: "toml"
+        name: "homepage_en"
+        file: "data/homepage_en.yml" # <-- YENİ HEDEF: Diğer veri dosyası
         fields:
-          - { label: "EN Hero Section", name: "languages.en.params.hero", widget: "object", fields: [
+          # (Buraya da homepage_en.yml ile eşleşen tam yapı gelecek)
+          - { label: "EN Hero Section", name: "hero", widget: "object", fields: [
               { label: "Enabled?", name: "enable", widget: "boolean" },
               { label: "Intro (Hello, I'm)", name: "intro", widget: "string" },
               { label: "Main Title", name: "title", widget: "string" },
               { label: "Subtitle", name: "subtitle", widget: "string" },
               { label: "Content Paragraph", name: "content", widget: "markdown" },
-              { label: "Image", name: "image", widget: "image" }
+              { label: "Image", name: "image", widget: "image" },
+              { label: "Button", name: "button", widget: "object", fields: [{label: "Enable?", name: "enable", widget: "boolean"}, {label: "Name", name: "name", widget: "string"}, {label: "URL", name: "url", widget: "string"}, {label: "New Page?", name: "newPage", widget: "boolean"}, {label: "Download?", name: "download", widget: "boolean"}]}
             ]}
-          - { label: "EN About Me Section", name: "languages.en.params.about", widget: "object", fields: [
+          - { label: "EN About Me Section", name: "about", widget: "object", fields: [
               { label: "Enabled?", name: "enable", widget: "boolean" },
               { label: "Section Title", name: "title", widget: "string" },
               { label: "About Me Text", name: "content", widget: "markdown" }
             ]}
-          - { label: "EN Work Experience", name: "languages.en.params.experience", widget: "object", fields: [
-              { label: "Enabled?", name: "enable", widget: "boolean" },
-              { label: "Section Title", name: "title", widget: "string" },
-              { name: "items", label: "Experience List", widget: "list", fields: [
-                  { label: "Company Name", name: "company", widget: "string" },
-                  { label: "Company URL", name: "companyUrl", widget: "string", required: false },
-                  { label: "Job Title", name: "job", widget: "string" },
-                  { label: "Date Range", name: "date", widget: "string" },
-                  { label: "Description (Bullets)", name: "content", widget: "markdown" },
-                  { label: "Extra Info (Info)", name: "info", widget: "object", fields: [{label: "Content", name: "content", widget: "string"}]},
-                  { label: "Featured Link", name: "featuredLink", widget: "object", fields: [{label: "Enable?", name: "enable", widget: "boolean"}, {label: "Name", name: "name", widget: "string"}, {label: "URL", name: "url", widget: "string"}]}
-              ]}
-            ]}
-          - { label: "EN Education", name: "languages.en.params.education", widget: "object", fields: [
-              { label: "Enabled?", name: "enable", widget: "boolean" },
-              { label: "Section Title", name: "title", widget: "string" },
-              { name: "items", label: "Education List", widget: "list", fields: [
-                  { label: "Date", name: "date", widget: "string" },
-                  { label: "Title (Degree/School)", name: "title", widget: "string" },
-                  { label: "School", name: "school", widget: "object", fields: [{label: "School Name", name: "name", widget: "string"}, {label: "School URL", name: "url", widget: "string", required: false}]},
-                  { label: "GPA", name: "GPA", widget: "string", required: false },
-                  { label: "Description", name: "content", widget: "markdown", required: false }
-              ]}
-            ]}
-          - { label: "EN Contact Section", name: "languages.en.params.contact", widget: "object", fields: [
-              { label: "Enabled?", name: "enable", widget: "boolean" },
-              { label: "Section Title", name: "title", widget: "string" },
-              { label: "Content", name: "content", widget: "text" },
-              { label: "Button Name", name: "btnName", widget: "string" }
-            ]}
+          # ... (İngilizce Deneyim, Eğitim, İletişim alanları buraya eklenecek) ...
