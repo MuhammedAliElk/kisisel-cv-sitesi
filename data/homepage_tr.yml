@@ -1,35 +1,43 @@
-# Bu dosya /data/homepage_tr.yml (TEMİZLENMİŞ KOD)
-
 hero:
   enable: true
-  intro: Merhaba, ben
-  title: Muhammed Ali Elkıran
-  subtitle: Geleceğin Michellin Yıldızlı Şefi
-  content: |
-    Merhaba! Yeteneklerimi ve deneyimlerimi sergilediğim kişisel CV siteme hoş geldiniz. 
-    Projelerime göz atarak ve özgeçmişimi inceleyerek hakkımda daha fazla bilgi edinebilirsiniz.
-  image: images/ben_karsilama.jpg
-  roundImage: false
-  button:
-    enable: true
-    name: "CV'mi Görüntüle"
-    url: /muhammed_cv.pdf
-    newPage: true
-    download: false
   socialLinks:
     fontAwesomeIcons:
-      - url: https://www.instagram.com/cheffmalie
+      - url: https://www.instagram.com/elkirannn
         icon: fab fa-instagram
       - url: mailto:muhammedalielkiran@gmail.com
         icon: fas fa-envelope
+  intro: Merhaba, ben
+  roundImage: false
+  button:
+    enable: true
+    name: CV'mi Görüntüle
+    url: /muhammed_cv.pdf
+    newPage: true
+    download: false
+  subtitle: " "
+  title: Muhammed Ali Elkıran
+  content: >
+    Merhaba! Yeteneklerimi ve deneyimlerimi sergilediğim kişisel CV siteme hoş
+    geldiniz. 
+
+    Projelerime göz atarak ve özgeçmişimi inceleyerek hakkımda daha fazla bilgi edinebilirsiniz.
+  image: images/ben_karsilama.jpg
 about:
   enable: true
   title: Hakkımda
-  content: |
-    Merhaba! Ben **Muhammed Ali Elkıran**, tutkula mesleğine bağlı bir aşçıyım. Mutfakta geçirdiğim her an, benim için bir keşif ve yaratıcılık yolculuğu. Bu lezzet dolu serüvene çıkmamda ailemin oldukça büyük payı var.Küçük yaşlardan itibaren mutfakla olan bağım, zamanla içimde büyüyen bir tutkuya dönüştü.
+  content: >
+    Merhaba! Ben **Muhammed Ali Elkıran**, tutkula mesleğine bağlı bir aşçıyım.
+    Mutfakta geçirdiğim her an, benim için bir keşif ve yaratıcılık yolculuğu.
+    Bu lezzet dolu serüvene çıkmamda ailemin oldukça büyük payı var.Küçük
+    yaşlardan itibaren mutfakla olan bağım, zamanla içimde büyüyen bir tutkuya
+    dönüştü.
+
     Sayısal bir lise eğitiminin ardından yazılım alanında üniversite okumuş olsam da, hayat beni her zaman kokuların, tatların ve dokuların hüküm sürdüğü mutfağa geri çekti. Mutfak benim için sadece yemek pişirilen bir yer değil; aynı zamanda **problem çözdüğüm**, **küçük detaylarda büyük farklar yarattığım** ve **yenilikçi yaklaşımlar sergilediğim** bir sanat alanı. Her tabakta hikayeler anlatmayı, insanları mutlu etmeyi ve her lokmada bir iz bırakmayı seviyorum.
+
     Hayatta beni en çok motive eden şey, **ailem**. Onların desteği ve sevgisi, mutfakta sınırları zorlamam için bana ilham veriyor. Mutfakta veya hayatta karşılaştığım her durumda, **çözüm odaklı** ve **pozitif** bir yaklaşımla hareket etmeyi ilke edindim. Beni tanıyanlar genellikle **güvenilir** ve **azimle çalışan** biri olarak tanımlar.
+
     Bu web sitesi, mutfakta ortaya koyduğum eserleri sergilediğim kişisel portfolyom. Burada sadece yemeklerimi değil, mutfak felsefemi ve yaratıcı sürecimi de keşfedeceksiniz. En büyük hedefim mi? Bir gün, adımı dünyadaki sayılı **Michelin yıldızlı şefler** arasına yazdırarak, global bir mutfak sanatçısı olmak.
+
     Mutfak yolculuğumda bana eşlik ettiğiniz için teşekkür ederim!
 experience:
   enable: true
@@ -91,7 +99,8 @@ projects:
 contact:
   enable: true
   title: İletişime Geçin
-  content: Bir proje hakkında konuşmak, bir soru sormak veya sadece merhaba demek isterseniz, aşağıdaki butona tıklayarak bana bir e-posta gönderebilirsiniz.
+  content: Bir proje hakkında konuşmak, bir soru sormak veya sadece merhaba demek
+    isterseniz, aşağıdaki butona tıklayarak bana bir e-posta gönderebilirsiniz.
   email: muhammedalielkiran@gmail.com
   btnName: E-posta Gönder
   formspree:
