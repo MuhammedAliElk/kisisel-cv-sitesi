@@ -6,65 +6,59 @@ defaultContentLanguage = "tr"
 # --- DİL TANIMLAMALARI ---
 [languages]
 
-  # 1. TÜRKÇE DİL AYARLARI
-  [languages.tr]
-    languageName = "Türkçe"
-    languageCode = "tr-tr"
-    weight = 1
-    title = "Muhammed Ali Elkıran" # <-- Sadece ana başlık kaldı
+  # 1. TÜRKÇE DİL AYARLARI
+  [languages.tr]
+    languageName = "Türkçe"
+    languageCode = "tr-tr"
+    weight = 1
+    title = "Muhammed Ali Elkıran"
 
-    [languages.tr.params]
-      favicon = "/logo.png"
-      #
-      # --- İÇERİK BLOKLARI ('hero', 'about', 'experience', 'education', 'contact', 'social') BURADAN SİLİNDİ ---
-      # --- BU İÇERİKLER ARTIK 'data/homepage_tr.yml' DOSYASINDAN OKUNACAK ---
-      #
-      [languages.tr.params.theme]
-        disableThemeToggle = false
-      [languages.tr.params.color]
-        primaryColor = "#212529"
-        backgroundColor = "#ffffff"
-        textColor = "#212529"
-        secondaryTextColor = "#6c757d"
-        textLinkColor = "#212529"
-        borderColor = "#dee2e6"
-      [languages.tr.params.navbar]
-        align = "mx-auto"
-        disableSearch = true
-        brandLogo = "/logo.png"
-        brandname = ""
-      [languages.tr.params.font]
-        fontSize = "1rem"
-        fontWeight = "700"
-        lineHeight = "1.6"
+    [languages.tr.params]
+      favicon = "/logo.png"
+      # --- İÇERİK BLOKLARI ('hero', 'about', 'experience' vb.) BURADAN SİLİNDİ ---
+      # --- BU İÇERİKLER ARTIK 'data/homepage_tr.yml' DOSYASINDAN OKUNACAK ---
+      [languages.tr.params.theme]
+        disableThemeToggle = false
+      [languages.tr.params.color]
+        primaryColor = "#212529"
+        backgroundColor = "#ffffff"
+        textColor = "#212529"
+        secondaryTextColor = "#6c757d"
+        textLinkColor = "#212529"
+        borderColor = "#dee2e6"
+      [languages.tr.params.navbar]
+        align = "mx-auto"
+        disableSearch = true
+        brandLogo = "/logo.png"
+        brandname = ""
+      [languages.tr.params.font]
+        fontSize = "1rem"
+        fontWeight = "700"
+        lineHeight = "1.6"
 
-  # 2. İNGİLİZCE DİL AYARLARI
-  [languages.en]
-    languageName = "English"
-    languageCode = "en-us"
-    weight = 2
-    title = "Muhammed Ali Elkıran" # <-- Sadece ana başlık kaldı
+  # 2. İNGİLİZCE DİL AYARLARI
+  [languages.en]
+    languageName = "English"
+    languageCode = "en-us"
+    weight = 2
+    title = "Muhammed Ali Elkıran"
 
-    [languages.en.params]
-      favicon = "/logo.png"
-      
-      # --- İÇERİK BLOKLARI ('hero', 'about', 'experience', 'education', 'contact', 'social') BURADAN SİLİNDİ ---
-      # --- BU İÇERİKLER ARTIK 'data/homepage_en.yml' DOSYASINDAN OKUNACAK ---
-      #
-      [languages.en.params.theme]
-        disableThemeToggle = false
-      
-      [languages.en.params.color]
-        primaryColor = "#212529"
-        backgroundColor = "#ffffff"
-        textColor = "#212529"
-      
-      [languages.en.params.navbar]
-        align = "mx-auto"
-        disableSearch = true
-        brandLogo = "/logo.png"
-        brandname = ""
-      [languages.en.params.font]
-        fontSize = "1rem"
-        fontWeight = "700"
-        lineHeight = "1.6"
+    [languages.en.params]
+      favicon = "/logo.png"
+      # --- İÇERİK BLOKLARI ('hero', 'about', 'experience' vb.) BURADAN SİLİNDİ ---
+      # --- BU İÇERİKLER ARTIK 'data/homepage_en.yml' DOSYASINDAN OKUNACAK ---
+      [languages.en.params.theme]
+        disableThemeToggle = false
+      [languages.en.params.color]
+        primaryColor = "#212529"
+        backgroundColor = "#ffffff"
+        textColor = "#212529"
+      [languages.en.params.navbar]
+        align = "mx-auto"
+        disableSearch = true
+        brandLogo = "/logo.png"
+        brandname = ""
+      [languages.en.params.font]
+        fontSize = "1rem"
+        fontWeight = "700"
+        lineHeight = "1.6"
