@@ -1,5 +1,4 @@
-# Bu dosya /data/homepage_en.yml
-# hugo.toml'daki İngilizce içeriğinizin YML formatına dönüştürülmüş hali
+# Bu dosya /data/homepage_en.yml (TEMİZLENMİŞ KOD)
 
 hero:
   enable: true
@@ -22,7 +21,6 @@ hero:
         icon: fab fa-instagram
       - url: mailto:muhammedalielkiran@gmail.com
         icon: fas fa-envelope
-
 about:
   enable: true
   title: "About Me"
@@ -36,7 +34,6 @@ about:
     This website is my personal portfolio where I showcase the creations I bring to life in the kitchen. Here, you will discover not only my dishes but also my culinary philosophy and creative process. My biggest goal? To one day become a global culinary artist by having my name written among the world's few Michelin-starred chefs.
 
     Thank you for accompanying me on my culinary journey!
-
 experience:
   enable: true
   title: "Work Experience"
@@ -68,7 +65,6 @@ experience:
         enable: true
         name: "2025 Season Gallery"
         url: "/#about"
-        
 education:
   enable: true
   title: "Education"
@@ -92,11 +88,9 @@ education:
       school:
         name: "Sare Özkaşıkçı"
       GPA: "90/100"
-
 projects:
   enable: false
   title: "Projects"
-  
 contact:
   enable: true
   title: "Get in Touch"
