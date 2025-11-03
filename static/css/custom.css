@@ -185,29 +185,47 @@ ama tutarlılık için kontrol edebilirsiniz. */
 
   /* Linkin de hafifçe yukarı kalkmasını sağlayalım */
   transform: translateY(-2px);
-}/* --- HERO BÖLÜMÜ BUTON VE İKONLARI İÇİN HOVER EFEKTİ --- */
+}/* --- YENİ: HERO SOSYAL MEDYA İKONLARI (DAİRESİZ VE BÜYÜK) --- */
 
-/* CV butonu ve sosyal ikonlara yumuşak bir geçiş efekti ekleyelim */
-#hero .btn,
-#hero .social-icon {
-  transition: all .2s ease-in-out;
+/* Yeni link sınıfımız (.hero-social-link) için temel ayarlar */
+.hero-social-link {
+  display: inline-block;
+  padding: 0 8px; /* İkonlar arasına yatay boşluk */
+  
+  /* Eski buton stillerini sıfırla (gerekirse) */
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  transform: none !important;
 }
 
-/* CV butonu ve sosyal ikonların üzerine gelince */
-#hero .btn:hover,
-#hero .social-icon:hover {
-  /* Mavi parlama efekti */
-  /* Not: İkonların kendisi metin gibi davrandığı için text-shadow kullanıyoruz */
-  text-shadow: 0 0 10px rgba(13, 110, 253, 0.5); 
+/* İkonun kendisi (i veya svg) */
+.hero-social-link i,
+.hero-social-link svg {
+  font-size: 2.2rem; /* <-- İKON BÜYÜKLÜĞÜ (İstediğiniz gibi değiştirin) */
+  
+  /* Açık Mod Rengi (hugo.toml'daki ana metin renginiz) */
+  color: #212529; 
+  
+  /* Yumuşak geçiş efekti */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
 
-  /* Hafifçe yukarı kalkma efekti */
-  transform: translateY(-2px);
+/* Koyu modda ikon rengi */
+body.dark .hero-social-link i,
+body.dark .hero-social-link svg {
+  color: #ffffff; /* Koyu Mod Rengi */
 }
-/* Menüdeki linklerin (Dil değiştirici dahil) rengini düzeltme */
-#profileHeader .nav-link {
-  color: #212529 !important; /* Sitenin ana metin rengi (siyaha yakın gri) */
+
+/* İkonların üzerine gelince (hover) efekti */
+.hero-social-link:hover i,
+.hero-social-link:hover svg {
+  transform: scale(1.15); /* Hafifçe büyüsün */
+  color: #555; /* Açık modda hover rengi (hafif soluk gri) */
 }
-/* Karanlık mod aktifken menüdeki yazıların görünür olması için */
-body.dark #profileHeader .nav-link {
-    color: #FFFFFF !important; /* Yazı rengini beyaz yap */
+
+body.dark .hero-social-link:hover i,
+body.dark .hero-social-link:hover svg {
+  color: #bbb; /* Koyu modda hover rengi (hafif soluk beyaz) */
 }
