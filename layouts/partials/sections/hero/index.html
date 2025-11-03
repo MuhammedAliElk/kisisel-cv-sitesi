@@ -25,8 +25,11 @@
         {{/* CV Butonu */}}
         {{ if $data.hero.button.enable }}
         <a href="{{ $data.hero.button.url }}" class="btn" {{ if $data.hero.button.newPage | default true }}target="_blank"{{ end }} {{ cond $data.hero.button.download "download" "" }}>
-            {{ $data.hero.button.name }}
-        </a>
+
+    {{/* YENİ: İkon eklendi. 'me-2' ikona sağdan küçük bir boşluk verir */}}
+    <i class="fas fa-file-arrow-down me-2"></i>{{ $data.hero.button.name }}
+
+</a>
         {{ end }}
 
         {{/* Sosyal ikonlar artık CV butonunun YANINDA, aynı div içinde */}}
