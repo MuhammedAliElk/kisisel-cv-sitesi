@@ -210,6 +210,8 @@ ama tutarlılık için kontrol edebilirsiniz. */
   
   /* Yumuşak geçiş efekti */
   transition: transform 0.2s ease, color 0.2s ease;
+
+  vertical-align: middle;
 }
 
 /* Koyu modda ikon rengi */
