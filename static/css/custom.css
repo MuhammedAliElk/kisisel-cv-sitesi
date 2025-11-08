@@ -213,7 +213,7 @@ ama tutarlılık için kontrol edebilirsiniz. */
   /* Yumuşak geçiş efekti */
   transition: transform 0.2s ease, color 0.2s ease;
   position: relative; /* Göreceli konumlandırmayı aç */
-  top: 5px;
+  top: 10px;
 
 }
 
