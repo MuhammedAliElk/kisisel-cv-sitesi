@@ -15,8 +15,11 @@ defaultContentLanguage = "tr"
 
     [languages.tr.params]
       favicon = "/logo.png"
-      # --- İÇERİK BLOKLARI ('hero', 'about', 'experience' vb.) BURADAN SİLİNDİ ---
-      # --- BU İÇERİKLER ARTIK 'data/homepage_tr.yml' DOSYASINDAN OKUNACAK ---
+      # --- İÇERİK ('hero', 'about' vb.) 'data/homepage_tr.yml' DOSYASINDADIR ---
+      
+      # --- SİTE STİLLERİ (BURADA KALMALI) ---
+      [languages.tr.params.social]
+        email = "muhammedalielkiran@gmail.com"
       [languages.tr.params.theme]
         disableThemeToggle = false
       [languages.tr.params.color]
@@ -45,8 +48,11 @@ defaultContentLanguage = "tr"
 
     [languages.en.params]
       favicon = "/logo.png"
-      # --- İÇERİK BLOKLARI ('hero', 'about', 'experience' vb.) BURADAN SİLİNDİ ---
-      # --- BU İÇERİKLER ARTIK 'data/homepage_en.yml' DOSYASINDAN OKUNACAK ---
+      # --- İÇERİK ('hero', 'about' vb.) 'data/homepage_en.yml' DOSYASINDADIR ---
+
+      # --- SİTE STİLLERİ (BURADA KALMALI) ---
+      [languages.en.params.social]
+        email = "muhammedalielkiran@gmail.com"
       [languages.en.params.theme]
         disableThemeToggle = false
       [languages.en.params.color]
